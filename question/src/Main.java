@@ -6,5 +6,6 @@ public class Main {
 
         System.out.println(solution_sw_e.countGoodSubstrings("xyzzaz")); //return 1
         System.out.println(solution_sw_e.countGoodSubstrings("aababcabc")); //return 4
+
     }
 }
