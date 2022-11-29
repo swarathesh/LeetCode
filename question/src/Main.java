@@ -4,8 +4,17 @@ public class Main {
 
         Solution_SW_E solution_sw_e = new Solution_SW_E();
 
-        System.out.println(solution_sw_e.countGoodSubstrings("xyzzaz")); //return 1
-        System.out.println(solution_sw_e.countGoodSubstrings("aababcabc")); //return 4
+//        System.out.println(solution_sw_e.countGoodSubstrings("xyzzaz")); //return 1
+//        System.out.println(solution_sw_e.countGoodSubstrings("aababcabc")); //return 4
+
+        //Minimum color
+         System.out.println(solution_sw_e.minimumRecolors("WBBWWBBWBW",7)); //return 3
+         System.out.println(solution_sw_e.minimumRecolors("WBWBBBW",2)); //return 0
+         System.out.println(solution_sw_e.minimumRecolors("BWWWBB",6)); //return 3
+
+
+
+
 
     }
 }
