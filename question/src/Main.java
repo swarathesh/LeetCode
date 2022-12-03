@@ -8,9 +8,13 @@ public class Main {
 //        System.out.println(solution_sw_e.countGoodSubstrings("aababcabc")); //return 4
 
         //Minimum color
-         System.out.println(solution_sw_e.minimumRecolors("WBBWWBBWBW",7)); //return 3
-         System.out.println(solution_sw_e.minimumRecolors("WBWBBBW",2)); //return 0
-         System.out.println(solution_sw_e.minimumRecolors("BWWWBB",6)); //return 3
+//         System.out.println(solution_sw_e.minimumRecolors("WBBWWBBWBW",7)); //return 3
+//         System.out.println(solution_sw_e.minimumRecolors("WBWBBBW",2)); //return 0
+//         System.out.println(solution_sw_e.minimumRecolors("BWWWBB",6)); //return 3
+//
+
+
+        System.out.println(solution_sw_e.findMin(new int[]{ 1, 4, 2, 10, 23, 3, 1, 0, 20 },4)); //return 3
 
 
 

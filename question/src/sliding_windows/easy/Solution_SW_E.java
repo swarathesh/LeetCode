@@ -129,6 +129,25 @@ public class Solution_SW_E {
         return b;
     }
 
+    public int findMin(int[] s, int k){
+        int max = Integer.MIN_VALUE;
+        int left = 0, right = 0;
+        int sum = 0;
+        int count = 0;
+        while (right< s.length){
+            sum += s[right];
+            count++;
+            if(count==k){
+                max = Math.max(max,sum);
+                count--;
+                sum-=s[left];
+                left++;
+            }
+            right++;
+        }
+        return max;
+    }
+
 
     private boolean isDuplicate(String s, int left, int right) {
         int[] chars = new int[128];
