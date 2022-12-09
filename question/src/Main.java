@@ -1,4 +1,6 @@
 import sliding_windows.easy.Solution_SW_E;
+import sliding_windows.easy.Solution_SW_M;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,7 +24,13 @@ public class Main {
 
 
 
-        System.out.println(solution_sw_e.containsNearbyDuplicate(new int[]{ 1,0,1,1},1)); //return 3
+//        System.out.println(solution_sw_e.containsNearbyDuplicate(new int[]{ 1,0,1,1},1)); //return 3
+
+
+        //lEET CODE MEDIUM
+        Solution_SW_M solution_sw_m = new Solution_SW_M();
+
+        System.out.println(solution_sw_m.noRepeatedCharacter("havefunonleetcode",5)); //return 3
 
 
 
