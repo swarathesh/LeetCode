@@ -14,7 +14,15 @@ public class Main {
 //
 
 
-        System.out.println(solution_sw_e.findMin(new int[]{ 1, 4, 2, 10, 23, 3, 1, 0, 20 },4)); //return 3
+//        System.out.println(solution_sw_e.findMin(new int[]{ 1, 4, 2, 10, 23, 3, 1, 0, 20 },4)); //return 3
+
+//        minimumDifference
+//        System.out.println(solution_sw_e.minimumDifference(new int[]{ 9,4,1,7 },2)); //return 3
+//        System.out.println(solution_sw_e.minimumDifference(new int[]{ 87063,61094,44530,21297,95857,93551,9918 },6)); //return 3
+
+
+
+        System.out.println(solution_sw_e.containsNearbyDuplicate(new int[]{ 1,0,1,1},1)); //return 3
 
 
 

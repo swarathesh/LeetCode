@@ -1,7 +1,6 @@
 package sliding_windows.easy;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Solution_SW_E {
     public int countGoodSubstrings(String s) {
@@ -148,6 +147,129 @@ public class Solution_SW_E {
         return max;
     }
 
+    public int minimumDifference(int[] nums, int k) {
+//        1984. Minimum Difference Between Highest and Lowest of K Scores
+//                Easy
+//        562
+//        92
+//        Companies
+//        You are given a 0-indexed integer array nums, where nums[i] represents the score of the ith student. You are also given an integer k.
+//
+//                Pick the scores of any k students from the array so that the difference between the highest and the lowest of the k scores is minimized.
+//
+//                Return the minimum possible difference.
+//
+//
+//
+//        Example 1:
+//
+//        Input: nums = [90], k = 1
+//        Output: 0
+//        Explanation: There is one way to pick score(s) of one student:
+//        - [90]. The difference between the highest and lowest score is 90 - 90 = 0.
+//        The minimum possible difference is 0.
+//        Example 2:
+//
+//        Input: nums = [9,4,1,7], k = 2
+//        Output: 2
+//        Explanation: There are six ways to pick score(s) of two students:
+//        - [9,4,1,7]. The difference between the highest and lowest score is 9 - 4 = 5.
+//                - [9,4,1,7]. The difference between the highest and lowest score is 9 - 1 = 8.
+//                - [9,4,1,7]. The difference between the highest and lowest score is 9 - 7 = 2.
+//                - [9,4,1,7]. The difference between the highest and lowest score is 4 - 1 = 3.
+//                - [9,4,1,7]. The difference between the highest and lowest score is 7 - 4 = 3.
+//                - [9,4,1,7]. The difference between the highest and lowest score is 7 - 1 = 6.
+//        The minimum possible difference is 2.
+
+//        87063,61094,44530,21297,95857,93551,9918
+//        if (nums.length == 1 && (k == 1)) return 0;
+//        int min = Integer.MAX_VALUE;
+//        nums = Arrays.stream(nums).sorted().toArray();
+//        int left = 0 , right = 1 , diff = 0,count =1;
+//        while (left < right && right < nums.length){
+//            diff = Math.abs(nums[left]-nums[right]);
+//            count++;
+//            if(count == k ) {
+//                min = Math.min(min, diff);
+//                count--;
+//            }
+//            if (right == nums.length-1){
+//                left++;
+//                right=left+1;
+//                continue;
+//            }
+//            right++;
+//        }
+//        return  min;
+
+            if(k == 1)return 0;
+            int i = 0,j = k-1,res = Integer.MAX_VALUE;
+
+            Arrays.sort(nums);
+            while(j < nums.length){
+                res = Math.min(res,nums[j] - nums[i]);
+                j++;
+                i++;
+            }
+
+            return res;
+
+    }
+
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+//        219. Contains Duplicate II
+//                Easy
+//        4.2K
+//        2.4K
+//                Companies
+//        Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+//
+//
+//
+//                Example 1:
+//
+//        Input: nums = [1,2,3,1], k = 3
+//        Output: true
+//        Example 2:
+//
+//        Input: nums = [1,0,1,1], k = 1
+//        Output: true
+//        Example 3:
+//
+//        Input: nums = [1,2,3,1,2,3], k = 2
+//        Output: false
+
+//        int left = 0,   right=1;
+//        while(left < right && right< nums.length){
+//            if (nums[left] ==  nums[right] && Math.abs(left -right )<=k) {
+//                return true;
+//            }
+//            if (right == nums.length-1){
+//                left++;
+//                right=left+1;
+//                continue;
+//            }
+//            right++;
+//        }
+//        return false;
+
+        //num,pos
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for (int i =0; i< nums.length;i++){
+            if (map.containsKey(nums[i]) &&
+                    (Math.abs(map.get(nums[i])-i ) <=k)){
+                return true;
+            }
+            map.put(nums[i],i);
+        }
+
+
+        return false;
+
+
+
+    }
 
     private boolean isDuplicate(String s, int left, int right) {
         int[] chars = new int[128];
