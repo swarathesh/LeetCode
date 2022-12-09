@@ -271,6 +271,10 @@ public class Solution_SW_E {
 
     }
 
+
+
+
+
     private boolean isDuplicate(String s, int left, int right) {
         int[] chars = new int[128];
         while (left<=right){
