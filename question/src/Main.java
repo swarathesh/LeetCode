@@ -32,6 +32,15 @@ public class Main {
 
         System.out.println(solution_sw_m.noRepeatedCharacter("havefunonleetcode",5)); //return 3
 
+        System.out.println(solution_sw_m.reverse(123)); //return 321
+
+        //make the last digit of the number to be the first digit of the number
+
+        
+
+
+
+
 
 
 
